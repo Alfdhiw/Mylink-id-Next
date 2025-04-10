@@ -1,103 +1,172 @@
 import Image from "next/image";
+import "@/styles/main.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import ServicesCarousel from "@/components/ServicesCarousel";
 
-export default function Home() {
+export default function HomePage() {
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="main">
+      {/* Hero Section */}
+      <section className="hero section dark-background text-white" id="hero">
+        <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+          <div className="lg:w-1/2" data-aos="zoom-out">
+            <h1 className="md:text-5xl mb-6 pb-2">
+              Better Solutions For Your Business
+            </h1>
+            <p className="mb-6 pb-5">
+              We are team of talented designers making websites with Bootstrap
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="#about"
+                className="bg-blue-500 px-6 py-2 rounded-full hover:bg-blue-600"
+              >
+                <span className="text-white font-medium">Get Started</span>
+              </a>
+              <a
+                href="#"
+                className="text-white flex items-center hover:text-blue-400 btn-watch-video"
+              >
+                <FontAwesomeIcon icon={faCirclePlay} className="mr-2 fa-lg" />
+                Watch Video
+              </a>
+            </div>
+          </div>
+          <div className="lg:w-1/2" data-aos="zoom-out" data-aos-delay="200">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/assets/img/hero-img.png"
+              alt="Hero Image"
+              width={600}
+              height={400}
+              className="w-full h-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      {/* About Section */}
+      <section className="skills section py-20" id="about">
+        <div className="container mx-auto px-4 text-center mb-16" data-aos="fade-up">
+          <h2 className="text-3xl font-bold mb-4">
+            The Best Templates Use MyLynk.id
+          </h2>
+          <p className="text-gray-600">
+            See how our template MyLynk to set the new standard for business
+          </p>
+        </div>
+        <div
+          className="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div>
+            <div className="grid grid-cols-2 gap-4">
+              {['faranov-img.webp', 'fikran-img.webp', 'kadafi-img.webp', 'fikran-img.webp'].map((img, i) => (
+                <div key={i} className="rounded-lg overflow-hidden">
+                  <Image
+                    src={`/assets/img/clients/${img}`}
+                    alt={`template${i + 1}`}
+                    width={400}
+                    height={250}
+                    className="w-full h-auto rounded-lg"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold mb-4">Modern and Elegant Template</h3>
+            <p className="italic mb-6 text-gray-600">
+              Equipped with standard development builds such as.
+            </p>
+            <div className="space-y-4">
+              {[
+                { skill: 'HTML', val: 100 },
+                { skill: 'CSS', val: 90 },
+                { skill: 'JavaScript', val: 75 },
+                { skill: 'Photoshop', val: 55 }
+              ].map(({ skill, val }) => (
+                <div key={skill}>
+                  <div className="flex justify-between text-sm font-semibold">
+                    <span>{skill}</span>
+                    <span>{val}%</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-200 rounded">
+                    <div
+                      className="h-2 bg-blue-500 rounded"
+                      style={{ width: `${val}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="services section light-background py-20 bg-gray-100">
+        <div className="container mx-auto px-4 text-center mb-10" data-aos="fade-up">
+          <h2 className="text-3xl font-bold mb-2">Not just another link-in-bio</h2>
+          <p className="text-gray-600">MyLink.id take care of your entire workflow, start to finish.</p>
+        </div>
+
+        <div className="container mx-auto px-4">
+          {/* Menu Tabs (non-fungsional untuk sekarang) */}
+          <ul className="flex flex-wrap justify-center gap-4 mb-10 text-sm font-semibold">
+            {[
+              ["Digital Product", "bi-archive-fill"],
+              ["Blog", "bi-vector-pen"],
+              ["Appointment", "bi-calendar-check-fill"],
+              ["Course", "bi-duffle-fill"],
+              ["Event Webinar", "bi-duffle-fill"],
+              ["Donation", "bi-duffle-fill"],
+              ["Store", "bi-duffle-fill"]
+            ].map(([title, icon], idx) => (
+              <li key={idx}>
+                <a className={`cursor-pointer px-4 py-2 rounded-full ${idx === 0 ? 'bg-blue-500 text-white' : 'bg-white border text-gray-700'} flex items-center gap-2`}>
+                  <i className={`bi ${icon}`}></i> {title}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Service Content (disederhanakan untuk satu aktif) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-20">
+            <div className="text-center">
+              <img src="/assets/img/clients/digital.webp" alt="Digital Product" className="mx-auto w-52" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold mb-2">Digital Product</h4>
+              <p className="text-gray-600">Sell ebooks, software, apps, templates, and more.</p>
+            </div>
+          </div>
+
+          {/* Domain Custom Section */}
+          <div className="grid md:grid-cols-2 gap-10 items-center mb-20" data-aos="fade-up" data-aos-delay="100">
+            <div className="text-center">
+              <img src="/assets/img/why-us.png" alt="Why Us" className="mx-auto w-full" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Create Your Own Custom Domain</h3>
+              <p className="text-gray-600">Use your custom domain in your bio link to get personal and integrate with Instagram Shopping.</p>
+            </div>
+          </div>
+
+          {/* Insights Section */}
+          <div className="grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Get Real Insights</h3>
+              <p className="text-gray-600">Lynk.id gives you actionable insights such as how many people are viewing your link/product.</p>
+            </div>
+            <div className="text-center">
+              <img src="/assets/img/skills.png" alt="Insights" className="mx-auto w-full" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
