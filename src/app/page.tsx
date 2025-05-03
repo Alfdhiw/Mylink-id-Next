@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "@/styles/main.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faCirclePlay, faXmark } from "@fortawesome/free-solid-svg-icons";
 import ServicesCarousel from "@/components/ServicesCarousel";
 
 export default function HomePage() {
@@ -166,6 +166,67 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section id="pricing" className="pricing section light-background">
+
+        <div className="container section-title" data-aos="fade-up">
+          <h2>Pricing</h2>
+          <p>Affordable prices with perfect quality</p>
+        </div>
+
+        <div className="container">
+          <div className="mx-auto grid max-w-lg grid-cols-1 items-center sm:mt-0 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-3">
+            <div className="col-lg-2 mr-5" data-aos="zoom-in" data-aos-delay="100">
+              <div className="pricing-item">
+                <h3>Free Plan</h3>
+                <h4><sup>$</sup>0<span> / month</span></h4>
+                <ul>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Quam adipiscing vitae proin</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Nec feugiat nisl pretium</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Nulla at volutpat diam uteera</span></li>
+                  <li className="na"><FontAwesomeIcon icon={faXmark} className="mr-2 fa-lg" /> <span>Pharetra massa massa ultricies</span></li>
+                  <li className="na"><FontAwesomeIcon icon={faXmark} className="mr-2 fa-lg" /> <span>Massa ultricies mi quis hendrerit</span></li>
+                </ul>
+                <a href="#" className="buy-btn">Buy Now</a>
+              </div>
+            </div>
+
+            <div className="col-lg-2 mr-5" data-aos="zoom-in" data-aos-delay="200">
+              <div className="pricing-item">
+                <h3>Business Plan</h3>
+                <h4><sup>$</sup>29<span> / month</span></h4>
+                <ul>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Quam adipiscing vitae proin</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Nec feugiat nisl pretium</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Nulla at volutpat diam uteera</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Pharetra massa massa ultricies</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Massa ultricies mi quis hendrerit</span></li>
+                </ul>
+                <a href="#" className="buy-btn">Buy Now</a>
+              </div>
+            </div>
+
+            <div className="col-lg-2 mr-5" data-aos="zoom-in" data-aos-delay="300">
+              <div className="pricing-item">
+                <h3>Developer Plan</h3>
+                <h4><sup>$</sup>49<span> / month</span></h4>
+                <ul>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Quam adipiscing vitae proin</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Nec feugiat nisl pretium</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Nulla at volutpat diam uteera</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Pharetra massa massa ultricies</span></li>
+                  <li><FontAwesomeIcon icon={faCheck} className="mr-2 fa-lg text-green-500" /> <span>Massa ultricies mi quis hendrerit</span></li>
+                </ul>
+                <a href="#" className="buy-btn">Buy Now</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
     </main>
   );
